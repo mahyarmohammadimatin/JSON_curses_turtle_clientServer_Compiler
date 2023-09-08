@@ -55,7 +55,7 @@ The server only accepts JSON-formatted code, so clients must be able to convert 
 Further details on this conversion process can be found in the "problem.pdf" file.
 
 ### Examples
-For examples of both valid and invalid SPPL programs, along with the JSON representation of a valid program, please refer to the "examples" folder.
+For examples of both valid and invalid SPPL programs, along with the JSON representation of a valid program, please refer to the samples.
 
 
 
