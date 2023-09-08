@@ -1,0 +1,108 @@
+{
+  "height": 100,
+  "width": 200,
+  "functions": [
+    {
+      "type": "function definition",
+      "function name": "haa",
+      "args": [
+        "x",
+        "n"
+      ],
+      "expression": {
+        "type": "+",
+        "A": "x",
+        "B": {
+          "type": "*",
+          "A": "n",
+          "B": 5
+        }
+      }
+    },
+    {
+      "type": "recursive function definition",
+      "function name": "draw",
+      "args": [
+        "x",
+        "y"
+      ],
+      "recursive arg": "n",
+      "base expression": {
+        "type": "function call",
+        "function name": "drawLine",
+        "args": [
+          "x",
+          "y",
+          "x",
+          {
+            "type": "function call",
+            "function name": "haa",
+            "args": [
+              "y",
+              1
+            ]
+          },
+          0,
+          0,
+          0
+        ]
+      },
+      "recursive expression": {
+        "recursive value name": "r",
+        "expression": {
+          "type": "function call",
+          "function name": "drawLine",
+          "args": [
+            {
+              "type": "function call",
+              "function name": "haa",
+              "args": [
+                "x",
+                "n"
+              ]
+            },
+            "y",
+            {
+              "type": "function call",
+              "function name": "haa",
+              "args": [
+                "x",
+                "n"
+              ]
+            },
+            {
+              "type": "function call",
+              "function name": "haa",
+              "args": [
+                "y",
+                {
+                  "type": "+",
+                  "A": "n",
+                  "B": 1
+                }
+              ]
+            },
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "type": "function definition",
+      "function name": "main",
+      "args": [],
+      "expression": {
+        "type": "function call",
+        "function name": "draw",
+        "args": [
+          1,
+          1,
+          5
+        ]
+      }
+    }
+  ]
+}
+
